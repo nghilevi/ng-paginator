@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-require('gulp-release-easy')(gulp, {releaseBranch: 'develop'});
+require('gulp-release-easy')(gulp, {releaseBranch: 'master'});
 var merge2 = require('merge2');
 var sass = require('gulp-sass');
 var gulpSequence = require('gulp-sequence');
