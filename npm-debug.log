@@ -1,0 +1,132 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.4
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/lvn/Dev/github_repo/ng-paginator',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/lvn/.npm/ng-paginator/1.0.2/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/lvn/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/Users/lvn/.npm/ng-paginator/1.0.2/package.tgz',
+10 verbose tar pack   '/Users/lvn/Dev/github_repo/ng-paginator' ]
+11 verbose tarball /Users/lvn/.npm/ng-paginator/1.0.2/package.tgz
+12 verbose folder /Users/lvn/Dev/github_repo/ng-paginator
+13 info prepublish ng-paginator@1.0.2
+14 verbose addLocalTarball adding from inside cache /Users/lvn/.npm/ng-paginator/1.0.2/package.tgz
+15 verbose correctMkdir /Users/lvn/.npm correctMkdir not in flight; initializing
+16 silly cache afterAdd ng-paginator@1.0.2
+17 verbose afterAdd /Users/lvn/.npm/ng-paginator/1.0.2/package/package.json not in flight; writing
+18 verbose correctMkdir /Users/lvn/.npm correctMkdir not in flight; initializing
+19 verbose afterAdd /Users/lvn/.npm/ng-paginator/1.0.2/package/package.json written
+20 silly publish { name: 'ng-paginator',
+20 silly publish   version: '1.0.2',
+20 silly publish   description: 'Angular 1 smart and easy to use pagination directive ',
+20 silly publish   main: 'dist/ng-paginator.js',
+20 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+20 silly publish   keywords:
+20 silly publish    [ 'pagination',
+20 silly publish      'paginator',
+20 silly publish      'ng-pagination',
+20 silly publish      'ng-paginator',
+20 silly publish      'client',
+20 silly publish      'angular',
+20 silly publish      'angular component',
+20 silly publish      'front-end' ],
+20 silly publish   dependencies: {},
+20 silly publish   devDependencies:
+20 silly publish    { angular: '^1.5.5',
+20 silly publish      'angular-mocks': '^1.5.8',
+20 silly publish      del: '^2.2.2',
+20 silly publish      gulp: '^3.9.1',
+20 silly publish      'gulp-angular-filesort': '^1.1.1',
+20 silly publish      'gulp-clean-css': '^2.0.12',
+20 silly publish      'gulp-concat': '^2.6.0',
+20 silly publish      'gulp-load-plugins': '^1.2.2',
+20 silly publish      'gulp-minify-html': '^1.0.6',
+20 silly publish      'gulp-ng-annotate': '^2.0.0',
+20 silly publish      'gulp-ngtemplate': '^0.2.5',
+20 silly publish      'gulp-release-easy': '^1.0.5',
+20 silly publish      'gulp-rename': '^1.2.2',
+20 silly publish      'gulp-replace': '^0.5.4',
+20 silly publish      'gulp-sass': '^2.3.2',
+20 silly publish      'gulp-sequence': '^0.4.5',
+20 silly publish      'gulp-uglify': '^1.5.3',
+20 silly publish      'gulp-webserver': '^0.9.1',
+20 silly publish      'gulp-wrap': '^0.11.0',
+20 silly publish      karma: '^1.2.0',
+20 silly publish      'karma-chrome-launcher': '^2.0.0',
+20 silly publish      'karma-jasmine': '^1.0.2',
+20 silly publish      merge2: '^1.0.2' },
+20 silly publish   author: { name: 'Nghi Le' },
+20 silly publish   license: 'ISC',
+20 silly publish   readme: '# Ng-paginator\n\n[![npm version](https://badge.fury.io/js/ng-paginator.svg)](http://badge.fury.io/js/ng-paginator)\n\nPagination component for Angular 1.x, displaying the sequence of numbers assigned to pages in a book or periodical.\n\n[`Demo`](https://vinhnghi223.github.io/ng-paginator/)\n\n# Usage\n\n### Install\n\n`npm i --save ng-paginator`\n\n### Add library to your page\n\n``` html\n<script src="node_modules/ng-paginator/dist/ng-paginator.js"></script>\n```\n\nYou should use minified version (`ng-paginator.min.js`) in production.\n\n\n### Add dependency in your application\'s module definition\n\n``` javascript\nvar application = angular.module(\'application\', [\n  // ...\n  \'ngPaginator\'\n]);\n```\n\n### Use ng-paginator in your html\n\n``` html\n<ng-paginator total-pages="25" current-page-id="1" visible-range-limit="4" on-click="vm.onPageClick(data)"></ng-paginator>\n```\n\n## API\n\n| Attributes                    | Description                                              |\n|-------------------------------|----------------------------------------------------------|\n| {integer} total-pages         | total number of pages.                                   |\n| {integer} current-page-id     | current page id.                                         |\n| {integer} visible-range-limit | number of page links to be visible one at a time.        |\n| {function} on-click           | callback to be called everytime user clicks a page link. |\n\n## Feedback\n\nIf you have found a bug or have another issue with the library —\nplease [create an issue][new-issue].\n\nIf you have a question regarding the library or it\'s integration with your project —\nconsider asking a question at [StackOverflow][so-ask] and sending me a\nlink via [E-Mail][email]. I will be glad to help.\n\nHave any ideas or propositions? Feel free to contact me by [E-Mail][email].\n\nCheers!\n\n## Developer guide\n\nFork, clone, create a feature branch, implement your feature, cover it with tests, commit, create a PR.\n\nRun:\n\n- `npm i` to initialize the project\n- `gulp` to re-build the dist files\n- `karma start` to test the code\n\nDo not add dist files to the PR itself.\nWe will re-compile the module manually each time before releasing.\n\n\n## Support\n\nIf you like this library consider to add star on [GitHub repository][repo-gh].\n\nThank you!\n',
+20 silly publish   readmeFilename: 'README.md',
+20 silly publish   gitHead: 'df73a3c45f4d7105e90544b4a207b4a60054592b',
+20 silly publish   _id: 'ng-paginator@1.0.2',
+20 silly publish   _shasum: '5f40545130ffd05879bc72b8ee40c672c6293be4',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name ng-paginator
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'ng-paginator',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'ng-paginator',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/ng-paginator
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /Users/lvn/.npm/ng-paginator/1.0.2/package.tgz
+29 verbose request uri https://registry.npmjs.org/ng-paginator
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 11:21:57 PM
+32 verbose request using bearer token for auth
+33 verbose request id d4acb4960d9ed839
+34 http request PUT https://registry.npmjs.org/ng-paginator
+35 http 403 https://registry.npmjs.org/ng-paginator
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '95',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Sun, 21 Aug 2016 20:21:59 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-bma7021-BMA',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1471810917.503715,VS0,VE1603',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /Users/lvn/.npm/registry.npmjs.org/ng-paginator on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: "You cannot publish over the previously published version 1.0.2." : ng-paginator
+39 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+39 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+39 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+39 verbose stack     at emitOne (events.js:82:20)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+40 verbose statusCode 403
+41 verbose pkgid ng-paginator
+42 verbose cwd /Users/lvn/Dev/github_repo/ng-paginator
+43 error Darwin 15.6.0
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+45 error node v4.4.4
+46 error npm  v2.15.1
+47 error code E403
+48 error "You cannot publish over the previously published version 1.0.2." : ng-paginator
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
