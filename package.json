@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "pagination", "paginator", "ng-pagination", "ng-paginator", 
+    "client", "angular", "angular component", "front-end"
+  ],
   "dependencies": {},
   "devDependencies": {
     "angular": "^1.5.5",
