@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="ng-paginator.min.css">
+    </head>
+    <body ng-app="demo" ng-controller="demoCtrl as vm">
+    Current page: {{ vm.currentPageId }}
+    <ng-paginator total-pages="25" current-page-id="1" visible-range-limit="4" on-click="vm.onPageClick(data)"></ng-paginator>
+    </body>
+    <script src="angular/angular.js"></script>
+    <script src="ng-paginator.min.js"></script>
+    <script src="app.js"></script>
+</html>
+
+
+
+
+
+
+
+

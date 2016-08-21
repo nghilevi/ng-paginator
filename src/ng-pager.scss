@@ -1,0 +1,84 @@
+$pagination-page-link-dimension: 30px;
+$pager-button-first-last-side-margin: 15px;
+$pager-font-size-large: 14px;
+$pager-button-margin: 5px;
+
+$pager-color-primary: blue;
+$pager-pink: pink;
+$pager-grey: grey;
+$pager-white: white;
+
+@mixin override-browser-outline(){
+  outline-style:none;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+@mixin on-focus(){
+  background-color: $pager-pink;
+  //border-radius: 50%;
+}
+
+@mixin on-disabled(){
+  color: $pager-grey;
+}
+
+@mixin page-style($height, $width){
+  height: $height;
+  width: $width;
+  display: inline-block;
+  text-align: center;
+}
+
+.ng-pagination{
+  @include override-browser-outline();
+}
+
+.ng-pagination-button {
+  color: $pager-color-primary;
+  font-size: $pager-font-size-large;
+  margin: 0 $pager-button-margin;
+  cursor: pointer;
+
+  &:focus{
+    @include override-browser-outline();
+  }
+
+  &.ng-pagination-page {
+    @include page-style(none,$pagination-page-link-dimension);
+  }
+
+  &--selected, &.ng-pagination-page:hover {
+    @include on-focus();
+  }
+
+  &.ng-pagination-button--disabled {
+    @include on-disabled();
+  }
+
+  &--previous {
+    margin-right: $pager-button-first-last-side-margin;
+  }
+
+  &--next {
+    margin-left: $pager-button-first-last-side-margin;
+  }
+
+  &--more {
+    cursor: default;
+  }
+}
+
+.colors-negative {
+  .ng-pagination-button {
+    color: $pager-white;
+    &--selected, &.ng-pagination-page:hover {
+      color: $pager-color-primary;
+    }
+  }
+}
+

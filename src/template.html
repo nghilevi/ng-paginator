@@ -1,0 +1,20 @@
+<div layout="row" class="ng-pagination" ng-keydown="vm.onFocus($event)" ng-click="vm.onFocus($event)" unselectable="on">
+
+    <span tabindex="0" class="ng-pagination-button ng-pagination-button--previous" aria-label="Previous"
+          ng-click="vm.goToPreviousPage()" ng-class="{'ng-pagination-button--disabled': vm.currentPageId === 1}">&lt;</span>
+    <span tabindex="0" class="ng-pagination-button ng-pagination-button--first" aria-label="First" ng-click="vm.goToFirstPage()" ng-if="vm.isTherePagesPrevious"> first </span>
+    <span class="ng-pagination-button ng-pagination-button--more" aria-label="MorePrevious" ng-if="vm.isTherePagesPrevious">...</span>
+
+    <span tabindex="0" class="ng-pagination-button ng-pagination-page" aria-label="Go to page {{page.id}}" ng-repeat="page in vm.visiblePages"
+               ng-click="vm.goToPage(page.id)"
+               ng-class="{'ng-pagination-button--selected': page.isSelected}">
+        <span class="ng-pagination-page__id">{{page.id}}</span>
+    </span>
+    <span class="ng-pagination-error-text" ng-if="vm.errorText">{{vm.errorText}}</span>
+
+    <span class="ng-pagination-button ng-pagination-button--more" aria-label="MoreNext" ng-if="vm.isTherePagesNext">...</span>
+    <span tabindex="0" class="ng-pagination-button ng-pagination-button--last" aria-label="Last" ng-if="vm.isTherePagesNext" ng-click="vm.goToLastPage()"> last </span>
+    <span tabindex="0" class="ng-pagination-button ng-pagination-button--next" aria-label="Next"
+          ng-click="vm.goToNextPage()" ng-class="{'ng-pagination-button--disabled': vm.currentPageId === vm.pagesData.length}">&gt;</span>
+
+</div>
