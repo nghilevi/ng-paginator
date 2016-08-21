@@ -4,6 +4,8 @@
 
 Pagination component for Angular 1.x, displaying the sequence of numbers assigned to pages in a book or periodical.
 
+[`Demo`](https://vinhnghi223.github.io/ng-paginator/)
+
 # Usage
 
 ### Install
